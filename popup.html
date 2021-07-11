@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recentile</title>
+
+    <style>
+        body{
+            width: 700px;
+            padding: 0;
+            margin: 0;
+        }
+        .thelink{  
+            padding-left: 5px;
+            text-decoration: none;
+        }
+        .thelink:hover{
+            font-weight: bold;
+            color: rgb(43, 12, 12);
+        }
+        hr{
+            margin: 3px 0 3px 0;
+            border-top: 1px dotted grey;
+        }
+        ul{
+            -moz-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+        ul>li{
+            -moz-transform: rotate(-180deg);
+            -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+            display: flex;
+            align-items: center;
+        }
+        img{
+            width: 16px;
+            height: 16px
+        }
+        button{
+            padding: 5px 20px;
+            background-color: rgb(43, 12, 12);
+            color: white;
+            border: 0;
+            border-radius: 12px;
+            outline: none;
+            cursor: pointer;
+            transition:0.3s ;
+        }
+        button:hover{
+            background-color: white;
+            color: rgb(43, 12, 12);
+            border: 1px solid rgb(43, 12, 12);
+        }
+        .buttonDiv{
+            margin: 8px;
+            float: left;
+        }
+        h2{
+            margin: 0;
+            background-color: rgb(43, 12, 12);
+            color: white;
+            padding: 8px;
+            font-weight: 500;
+        }
+        .container{
+            padding: 10px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        ::-webkit-scrollbar{
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track{
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb{
+            background: #888;
+        }
+        .msg{
+            visibility: hidden;
+            height: 25px;
+            margin: 8px;
+            font-weight: bold;
+            color: rgb(43, 12, 12);
+            display: flex;
+            align-items: center;
+        }
+        #tile{
+            color: rgb(95, 250, 255);
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Recen<span id="tile">tile<span></h2>
+    <div class="container">
+        <div id="msg"></div>
+        <ul id="linklist"></ul>
+    
+        <script src="jquery-3.2.1.min.js"></script>
+        <script src="popup.js"></script>
+    </div>
+    <div class="buttonDiv">
+        <button class="joke">Jokes</button>
+        <button class="highlight">Highlighter</button>
+    </div>
+    <div class="msg">
+      Highlighter is already activated. Select the text you want to highlight. 
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "RecenTile",
+    "description": "Shows recent webpages you visited, no need to search in History. Provides facility to highlight webpages. Bored of working since long? We have jokes for you :)",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js","jquery-3.2.1.min.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Recents"
+    },
+    "background":{
+        "scripts": ["background.js"]
+    },
+    "permissions": ["tabs", "<all_urls>"]
+}
